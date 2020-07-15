@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+}
+aside {
+    float: right;
+    padding-right: 25%;
+    text-align: left;
+}
+section {
+    float: left;
+    padding-left: 25%;
+}
+
