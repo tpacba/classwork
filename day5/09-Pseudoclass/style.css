@@ -1,0 +1,15 @@
+.firstlink:default {
+    background-color: white;
+}
+
+.firstlink:hover {
+    background-color: violet;
+}
+
+.firstlink:focus {
+    background-color: yellow;
+}
+
+.firstlink:active {
+    background-color: lightcoral;
+}
