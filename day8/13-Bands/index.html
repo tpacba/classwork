@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bands</title>
+</head>
+<body>
+    <script>
+        var bandName = ["Beatles", "Rolling Stones"];
+        var favBand = prompt("What is your favorite band?");
+        favBand = favBand.toLowerCase();
+
+        for (var i = 0; i < bandName.length; i++) {
+            if (bandName[i].toLowerCase() == favBand) {
+                alert("YEAH, I LOVE THEM!");
+                break;
+            } else {
+                alert("Nah. They're pretty lame!");
+                break;
+            }
+        }
+
+    </script>
+</body>
+</html>
