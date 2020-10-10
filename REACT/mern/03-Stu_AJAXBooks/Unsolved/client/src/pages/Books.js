@@ -4,6 +4,7 @@ import DeleteBtn from "../components/DeleteBtn";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import API from "../utils/API";
 
 function Books() {
   // Initialize books as an empty array
@@ -15,6 +16,12 @@ function Books() {
 
     function loadBooks() {
       // Add code here to get all books from the database and store them using setBooks
+      API.getBooks()
+        .then(data => {
+          console.log(data)
+          setBooks(data.data)
+        })
+        .catch(err => console.log(err))
     }
 
     return (

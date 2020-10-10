@@ -28,16 +28,32 @@ function Books() {
       .catch(err => console.log(err));
   };
 
-  function handleInputChange() {
+  function handleInputChange(event) {
     // add code to control the components here
+    event.preventDefault();
+
+    const {name, value} = event.target;
+    setFormObject({
+      ...formObject,
+      [name]: value
+    })
   }
 
-  function handleFormSubmit() {
+  function handleFormSubmit(event) {
     // add code here to post a new book to the api
+    event.preventDefault();
+
+    API.saveBook(formObject)
+      .then(loadBooks)
+      .catch(err => console.log(err))
   }
 
-  function deleteBook() {
+  function deleteBook(id) {
     // add code here to remove a book using API
+    API.deleteBook(id)
+      .then(loadBooks)
+      .catch(err => console.log(err))
+
   }
 
     return (
