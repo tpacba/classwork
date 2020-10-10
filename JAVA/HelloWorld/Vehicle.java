@@ -4,6 +4,20 @@ public class Vehicle {
     private String color;
     private double fuelCapacity;
 
+    Vehicle() {
+        this.setMaxSpeed(30);
+        wheels = 4;
+        this.setColor("red");
+        fuelCapacity = 40.50;
+    }
+
+    Vehicle(int newMaxSpeed, int newWheels, String newColor, double newFuelCapacity) {
+        this.setMaxSpeed(newMaxSpeed);
+        wheels = newWheels;
+        this.setColor(newColor);
+        fuelCapacity = newFuelCapacity;
+    }
+
     public void horn() {
         System.out.println("Beep!");
     }
